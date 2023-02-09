@@ -55,7 +55,8 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	
 	function results(){
             var total = allergy_count + cold_count;
-		alert("Allergy Percentage:" + (allergy_count / total) * 100 +"<br> Cold Percentage:" + (cold_count / total) * 100);
+		alert("Allergy Percentage:" + (allergy_count / total) * 100 +
+		      "\n Cold Percentage:" + (cold_count / total) * 100);
         }//function that calculates the number of cold related responses
 
   </script>
@@ -175,6 +176,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	<div class="w3-container w3-flat-carrot">
 		<h1>Results</h1>
 	</div>
+	
 	<a onclick="results()" class="w3-btn w3-black"> Results</a>
 	</div>
 	
