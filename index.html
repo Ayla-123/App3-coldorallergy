@@ -38,8 +38,9 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 <script>
         var allergy_count = 0;//variable that counts allergy answers
         var cold_count = 0;//variable that counts cold answers
-	var coldPercent = 0;//variable that calculates cold results
-	var allergyPercent = 0;//variable that calculates allergy results
+	var allergyPercent = (allergy_count)/(6)*100
+	var coldPercent = (cold_count)/(6)*100
+	var resultText = document.getElementById("results");	
 
 
         function allergyAdd(){
@@ -172,9 +173,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 <p id="results"></p>
 	
 </script>
-var allergyPercent = (allergy_count)/(6)*100
-var coldPercent = (cold_count)/(6)*100
-var resultText = document.getElementById("results");	
+
 	
 document.getElementById("results")resultText.innerHTML = "Probability it is allergies =" + allergyPercent + "<br> Probability it is a cold =" + coldPercent";
 </script>
