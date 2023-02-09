@@ -20,7 +20,7 @@ Brief Description of Goal of Code:
 The main goal of this code is to create an app that someone can use to figure out if they have allergies or a cold. The app will ask 6 yes/no questions regarding various symptoms, and in the end it will display the results.
  
 Known Issues:
-blah, blah, blah, blah
+Some issues in my code are that a pop up comes up when I click on my Yes or No buttons sometimes. In addition, I am not able to add a space between my Allergy Percentage and Cold Percentage.
 
 https://www.w3schools.com/w3css/default.asp
 https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-file
@@ -56,7 +56,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	function results(){
             var total = allergy_count + cold_count;
 		alert("Allergy Percentage:" + (allergy_count / total) * 100 +
-		      "/nCold Percentage:" + (cold_count / total) * 100);
+		      "<br>Cold Percentage:" + (cold_count / total) * 100);
         }//function that calculates the number of cold related responses
 
   </script>
@@ -175,6 +175,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 <div class="page" id="seven">
 	<div class="w3-container w3-flat-carrot">
 		<h1>Results</h1>
+	</div>
 	<a onclick="results()" class="w3-btn w3-black"> Results</a>
 	</div>
 	
