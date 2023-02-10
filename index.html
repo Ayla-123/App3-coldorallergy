@@ -20,7 +20,7 @@ Brief Description of Goal of Code:
 The main goal of this code is to create an app that someone can use to figure out if they have allergies or a cold. The app will ask 6 yes/no questions regarding various symptoms, and in the end it will display the results.
  
 Known Issues:
-Some issues in my code are that a pop up comes up when I click on my Yes or No buttons sometimes. In addition, I am not able to add a space between my Allergy Percentage and Cold Percentage.
+Some issues in my code are that a pop up comes up when I click on my Yes or No buttons sometimes. 
 
 https://www.w3schools.com/w3css/default.asp
 https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-file
@@ -40,19 +40,18 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
         var cold_count = 0;//variable that counts cold answers
 
         function allergyAdd(){
-            allergy_count = allergy_count + 1;
-		alert(allergy_count);
-
-        }//function that calculates the number of allergy related responses
+            allergy_count = allergy_count + 1;//if the question answered is for allergy, it adds 1 to allergy count
+		alert(allergy_count);//pop-up of count when question answered is for allergy
+        }//total function calculates the number of allergy related responses
 
         function coldAdd(){
-            cold_count = cold_count + 1;
-        }//function that calculates the number of cold related responses
+            cold_count = cold_count + 1;//if question answered is for cold, it adds 1 to cold count
+        }//total function calculates the number of cold related responses
 	
 	function getresults(){
-		var allergyPercent = (allergy_count)/(6)*100;
-		var coldPercent = (cold_count)/(6)*100
-			document.getElementById("results").innerHTML =  "Probability it is allergies =" + allergyPercent + "<br> Probability it is a cold =" + coldPercent; 
+		var allergyPercent = (allergy_count)/(6)*100;//calculates percent chance of allergy by taking total allergy count, dividing it by total number of questions, and multiplying by 100
+		var coldPercent = (cold_count)/(6)*100//calculates percent chance of cold by taking total cold count, dividing it by total number of questions, and multiplying by 100
+			document.getElementById("results").innerHTML =  "Probability it is allergies =" + allergyPercent + "<br> Probability it is a cold =" + coldPercent;//displays percent chances of allergy and cold on screen
 	}
 
   </script>
@@ -167,20 +166,16 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	</div>
 </div>	
 
-<!--page 7 of app; titled results page, added java code to show results of survey answers-->
+<!--page 7 of app; titled results page, added results button which shows probability of allergy and cold when clicked-->
 <div class="page" id="seven">
 	<div class="w3-container w3-flat-carrot">
 		<h1>Results</h1>
 	</div>
-	
 	<div id="content" class="w3-container">
-		
 		<p id="results"></p>
-		
 		<button onclick="getresults()">Results</button>
-
 	</div>
-	
+</div>
 <footer class="w3-bottom w3-container w3-flat-carrot">
 	<p>DIY!</p>
 </footer>
